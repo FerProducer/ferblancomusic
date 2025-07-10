@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
- <link rel="icon" type="image/png" href="https://github.com/FerProducer/ferblancomusic/blob/main/Escudo%20ZOMOZ-8.png?raw=true">
+  <link rel="icon" type="image/png" href="https://github.com/FerProducer/ferblancomusic/blob/main/Escudo%20ZOMOZ-8.png?raw=true">
   <title>Fer Blanco | Evolution</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
@@ -57,19 +57,31 @@
       max-width: 500px;
       margin: 1rem auto;
     }
+    .btns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
     .btns a {
-      margin: 1rem 0.5rem;
-      color: white;
-      padding: 0.8rem 1.5rem;
       background: #1db954;
-      text-decoration: none;
       border-radius: 999px;
-      font-weight: bold;
-      transition: 0.3s;
-      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
     }
     .btns a:hover {
       background: #1ed760;
+      transform: scale(1.05);
+    }
+    .btns img {
+      width: 24px;
+      height: 24px;
+      filter: invert(1);
     }
     footer {
       background: #0a0a0a;
@@ -90,9 +102,7 @@
         font-size: 1rem;
       }
       .btns a {
-        display: block;
-        width: 80%;
-        margin: 0.5rem auto;
+        padding: 0.8rem;
       }
     }
   </style>
@@ -114,14 +124,20 @@
     onplay="registrarReproduccion()" 
     controlsList="nodownload" 
     oncontextmenu="return false">
-    <source src="https://raw.githubusercontent.com/FerProducer/ferblancomusic/main/Corto%20promo.mp3
-" type="audio/mpeg">
+    <source src="https://raw.githubusercontent.com/FerProducer/ferblancomusic/main/Corto%20promo.mp3" type="audio/mpeg">
     Tu navegador no soporta el audio.
   </audio>
+
   <div class="btns">
-    <a href="https://open.spotify.com/artist/6BWkYlt9w7g7LYcUmGYJ6m?si=TFWnspYTSTSup4BwJTz_jg" target="_blank">Spotify</a>
-    <a href="https://music.apple.com/us/artist/fer-blanco/1727529207" target="_blank">Apple Music</a>
-    <a href="https://www.youtube.com/@FerBlancoMusic/videos" target="_blank">YouTube</a>
+    <a href="https://open.spotify.com/artist/6BWkYlt9w7g7LYcUmGYJ6m?si=TFWnspYTSTSup4BwJTz_jg" target="_blank" aria-label="Spotify">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spotify.svg" alt="Spotify">
+    </a>
+    <a href="https://music.apple.com/us/artist/fer-blanco/1727529207" target="_blank" aria-label="Apple Music">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/applemusic.svg" alt="Apple Music">
+    </a>
+    <a href="https://www.youtube.com/@FerBlancoMusic/videos" target="_blank" aria-label="YouTube">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
+    </a>
   </div>
 </section>
 
