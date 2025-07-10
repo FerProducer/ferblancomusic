@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fer Blanco | Evolution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      background: url('https://github.com/FerProducer/ferblancomusic/blob/main/ChatGPT%20Image%208%20jul%202025,%2009_30_14%20p.m..png?raw=true') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .content {
+      z-index: 1;
+      padding: 2rem;
+      animation: fadeIn 2s ease;
+    }
+    .content h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    .content p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .player-section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #121212;
+    }
+    audio {
+      width: 80%;
+      max-width: 500px;
+      margin: 1rem auto;
+    }
+    .btns a {
+      margin: 1rem 1rem;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      background: #1db954;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btns a:hover {
+      background: #1ed760;
+    }
+    footer {
+      background: #0a0a0a;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="content">
+    <h1>Evolution</h1>
+    <p>Es el viaje íntimo de un alma que transforma dudas en arte. Un eco de lo que fui y lo que elijo ser. No es solo música, es mi manera de renacer sin pedir permiso. Porque evolucionar es recordar quién eres y hacerlo eterno.</p>
+  </div>
+</header>
+
+<section class="player-section">
+  <h2>Escúchala ahora</h2>
+  <audio 
+    controls 
+    id="audio-player" 
+    onplay="registrarReproduccion()" 
+    controlsList="nodownload" 
+    oncontextmenu="return false">
+    <source src="https://raw.githubusercontent.com/FerProducer/ferblancomusic/main/City%20light.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+  <div class="btns">
+    <a href="https://open.spotify.com/artist/..." target="_blank">Spotify</a>
+    <a href="https://music.apple.com/artist/..." target="_blank">Apple Music</a>
+    <a href="https://youtube.com/..." target="_blank">YouTube</a>
+  </div>
+</section>
+
+<footer>
+  © 2025 Fer Blanco. Todos los derechos reservados.
+</footer>
+
+<script>
+  function registrarReproduccion() {
+    fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        track: "Evolution",
+        date: new Date().toISOString()
+      })
+    });
+  }
+</script>
+
+</body>
+</html>
