@@ -22,6 +22,7 @@
       justify-content: center;
       text-align: center;
       position: relative;
+      padding: 0 1rem;
     }
     header::before {
       content: "";
@@ -33,15 +34,17 @@
       z-index: 1;
       padding: 2rem;
       animation: fadeIn 2s ease;
+      max-width: 100%;
     }
     .content h1 {
-      font-size: 4rem;
+      font-size: 8vw;
       margin-bottom: 1rem;
     }
     .content p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      font-size: 1.1rem;
+      max-width: 90%;
       margin: auto;
+      line-height: 1.6;
     }
     .player-section {
       padding: 4rem 2rem;
@@ -49,12 +52,12 @@
       background: #121212;
     }
     audio {
-      width: 80%;
+      width: 90%;
       max-width: 500px;
       margin: 1rem auto;
     }
     .btns a {
-      margin: 1rem 1rem;
+      margin: 1rem 0.5rem;
       color: white;
       padding: 0.8rem 1.5rem;
       background: #1db954;
@@ -62,6 +65,7 @@
       border-radius: 999px;
       font-weight: bold;
       transition: 0.3s;
+      display: inline-block;
     }
     .btns a:hover {
       background: #1ed760;
@@ -76,6 +80,19 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px);}
       to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 600px) {
+      .content h1 {
+        font-size: 2.5rem;
+      }
+      .content p {
+        font-size: 1rem;
+      }
+      .btns a {
+        display: block;
+        width: 80%;
+        margin: 0.5rem auto;
+      }
     }
   </style>
 </head>
@@ -128,3 +145,4 @@
 
 </body>
 </html>
+
