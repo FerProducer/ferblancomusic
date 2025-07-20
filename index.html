@@ -169,8 +169,24 @@
 </footer>
 
 <script>
+  // Registrar visita automáticamente al entrar al sitio
+  fetch('https://script.google.com/macros/s/AKfycbxl4mqvYXAXIuTJLhMElLx4m7L1-Hvs5_kLuHDQ_tki7p7Rsq665lit86WzoXd1ybNB/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      evento: "Visita al sitio",
+      track: "Evolution",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    })
+  });
+
+  // Tu función actual de reproducción, puedes dejarla si la usas después
   function registrarReproduccion() {
-    fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxl4mqvYXAXIuTJLhMElLx4m7L1-Hvs5_kLuHDQ_tki7p7Rsq665lit86WzoXd1ybNB/exec', {
       method: 'POST',
       mode: 'no-cors',
       headers: {
@@ -178,11 +194,13 @@
       },
       body: JSON.stringify({
         track: "Evolution",
-        date: new Date().toISOString()
+        tipo: "Reproducción",
+        timestamp: new Date().toISOString()
       })
     });
   }
 </script>
+
 
 </body>
 </html>
